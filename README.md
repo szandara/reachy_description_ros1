@@ -1,27 +1,23 @@
 # Reachy description
 
-This ROS package contains URDF and collada files to use the [Reachy](https://pollen-robotics.com) robot with ROS1 Noetic.
+This ROS package contains URDF and collada files to use [Reachy](https://pollen-robotics.com) with ROS2 Foxy.
 
-![Reachy in RViz ROS Melodic](./img/reachy_urdf_rviz.png)
+![Reachy in RViz ROS2 Foxy](./img/reachy_urdf_rviz.png)
 
 ## Quickstart
 
 Launch the following command in order to run RViz, visualize the robot and move the joints:
 ```bash
-roslaunch reachy_description display.launch gui:=True
+ros2 launch reachy_description rviz_gui.launch.py
 ```
 
-If you are not using the Advanced Reachy configuration, you may disable parts of the robot, e.g. for the Basic configuration:
-```bash
-roslaunch reachy_description display.launch gui:=True left_arm:=false head:=false
-```
 
 ## Get the URDF of Reachy
 ### Option 1. Generate the URDF by choosing your effector (preferred)
 
 Invoke xacro by passing the desired effector as an argument and redirect the output to an URDF file:
 ```bash
-roscd reachy_description
+cd your_reachy_description_folder
 
 # For the Advanced configuration:
 xacro reachy.URDF.xacro >reachy.URDF
