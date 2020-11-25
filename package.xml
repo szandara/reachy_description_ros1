@@ -1,19 +1,26 @@
 <?xml version="1.0"?>
-<package format="2">
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>reachy_description</name>
   <version>1.0.0</version>
-  <description>ROS package for the Reachy robot</description>
-  <maintainer email="yoan.mollard@poppy-station.org">Yoan Mollard</maintainer>
-  <license>Apache</license>
+  <description>ROS description package for the Reachy robot</description>
+  <maintainer email="contact@pollen-robotics.com">Pollen Robotics</maintainer>
+  <license>Apache License 2.0</license>
   <url type="website">http://pollen-robotics.com</url>
 
+  <depend>rclpy</depend>
   <depend>robot_state_publisher</depend>
   <depend>joint_state_publisher</depend>
   <depend>joint_state_publisher_gui</depend>
   <depend>rviz</depend>
   <depend>xacro</depend>
-  <buildtool_depend>catkin</buildtool_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
 
   <export>
+    <build_type>ament_python</build_type>
   </export>
 </package>
